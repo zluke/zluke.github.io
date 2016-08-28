@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo常用命令 | luke</title>
+  <title>git配置 | luke</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="hexo是一款基于Node.js的静态博客框架，可以方便地生成静态网页，其官网：https://hexo.io/基于hexo，再利用github提供的免费博客服务github pages，我们可以方便地搭建一个属于自己的博客网站。
 1. hexo的安装1.1 安装Node.js由于hexo依赖Node.js，所以需要先安装Node.js。Node.js官网：https://nodejs.org/，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo常用命令">
-<meta property="og:url" content="https://zluke.github.io/2016/08/21/hexo-usage/index.html">
+<meta property="og:title" content="git配置">
+<meta property="og:url" content="https://zluke.github.io/2016/08/28/git-config/index.html">
 <meta property="og:site_name" content="luke">
 <meta property="og:description" content="hexo是一款基于Node.js的静态博客框架，可以方便地生成静态网页，其官网：https://hexo.io/基于hexo，再利用github提供的免费博客服务github pages，我们可以方便地搭建一个属于自己的博客网站。
 1. hexo的安装1.1 安装Node.js由于hexo依赖Node.js，所以需要先安装Node.js。Node.js官网：https://nodejs.org/，">
-<meta property="og:updated_time" content="2016-08-28T08:29:26.614Z">
+<meta property="og:updated_time" content="2016-08-28T08:17:37.379Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo常用命令">
+<meta name="twitter:title" content="git配置">
 <meta name="twitter:description" content="hexo是一款基于Node.js的静态博客框架，可以方便地生成静态网页，其官网：https://hexo.io/基于hexo，再利用github提供的免费博客服务github pages，我们可以方便地搭建一个属于自己的博客网站。
 1. hexo的安装1.1 安装Node.js由于hexo依赖Node.js，所以需要先安装Node.js。Node.js官网：https://nodejs.org/，">
   
@@ -62,10 +62,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo-usage" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git-config" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/08/21/hexo-usage/" class="article-date">
-  <time datetime="2016-08-20T16:05:30.134Z" itemprop="datePublished">2016-08-21</time>
+    <a href="/2016/08/28/git-config/" class="article-date">
+  <time datetime="2016-08-28T08:16:42.850Z" itemprop="datePublished">2016-08-28</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo常用命令
+      git配置
     </h1>
   
 
@@ -116,21 +116,18 @@
 <p>也可以访问<a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">https://hexo.io/docs/commands.html</a>获取。</p>
 <h2 id="3-发布到github"><a href="#3-发布到github" class="headerlink" title="3. 发布到github"></a>3. 发布到github</h2><p>hexo提供了”hexo deploy”命令，可以方便地将生成的页面发布到github。但使用该命令之前，需要做一些配置。</p>
 <h3 id="3-1-配置github环境"><a href="#3-1-配置github环境" class="headerlink" title="3.1 配置github环境"></a>3.1 配置github环境</h3><ul>
-<li>在本地安装安装git客户端，在此不再赘述。</li>
-<li>在github上创建仓库，该仓库名称格式必须为”your_user_name.github.io”，否则，静态页面文件推到github上后是不会当前网站显示的。</li>
+<li>安装git客户端<br>该仓库名称格式必须为”your_user_name.github.io”，否则，静态页面文件推到github上后是不会当前网站显示的。</li>
 </ul>
 <h3 id="3-2-安装hexo-git部署插件"><a href="#3-2-安装hexo-git部署插件" class="headerlink" title="3.2 安装hexo git部署插件"></a>3.2 安装hexo git部署插件</h3><p>执行如下命令安装hexo git部署插件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <h3 id="3-3-修改-config-yml文件"><a href="#3-3-修改-config-yml文件" class="headerlink" title="3.3 修改_config.yml文件"></a>3.3 修改_config.yml文件</h3><p>打开本地博客根目录下的_config.yml文件，找到deploy部分的配置，按照如下格式添加配置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repository:</span> git@github.com:&#123;username&#125;/&#123;username&#125;.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure>
-<p>执行如下命令，根据git配置，生成git文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>最后，执行如下命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>接下来执行下面命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zluke.github.io/2016/08/21/hexo-usage/" data-id="cised4bmi0001a0ikqcb955k1" class="article-share-link">Share</a>
+      <a data-url="https://zluke.github.io/2016/08/28/git-config/" data-id="cised4bm40000a0ik2krtudfi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客搭建/">博客搭建</a></li></ul>
@@ -141,15 +138,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/08/28/git-config/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          git配置
-        
-      </div>
-    </a>
   
+    <a href="/2016/08/21/hexo-usage/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo常用命令</div>
+    </a>
   
 </nav>
 
